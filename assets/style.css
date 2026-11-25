@@ -1,0 +1,22 @@
+:root {
+  --navy: #1F3A5F; --navy-dark: #162A45; --accent: #2E6CA4; --line: #DCE3EC;
+  --ink: #1C2530; --muted: #5B6675;
+}
+.block-container { padding-top: 1.8rem; max-width: 1200px; }
+h1 { font-size: 1.7rem !important; color: var(--navy) !important; }
+h2, h3 { color: var(--ink) !important; font-weight: 650 !important; }
+
+div[data-testid="stExpander"] {
+  border: 1px solid var(--line) !important; border-radius: 8px !important;
+  box-shadow: 0 1px 4px rgba(28,37,48,.05);
+}
+.stButton > button, .stDownloadButton > button {
+  border-radius: 6px !important; font-weight: 600;
+}
+.stButton > button[kind="primary"] {
+  background: var(--navy) !important; color: #fff !important; border: none !important;
+  box-shadow: 0 2px 8px rgba(31,58,95,.25) !important;
+}
+.stButton > button[kind="primary"]:hover { background: var(--navy-dark) !important; }
+.stDataFrame { border-radius: 8px; overflow: hidden; border: 1px solid var(--line); }
+div[data-testid="stAlert"] { border-radius: 8px; }

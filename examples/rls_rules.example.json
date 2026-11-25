@@ -1,0 +1,10 @@
+{
+  "TEST_USER_A": {
+    "brand": {"allow": ["Alpha"], "deny": []},
+    "region": {"allow": [], "deny": ["North"]}
+  },
+  "TEST_USER_B": {
+    "brand": {"allow": [], "deny": ["Beta"]},
+    "region": {"allow": ["South", "West"], "deny": []}
+  }
+}

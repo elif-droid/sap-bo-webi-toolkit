@@ -1,0 +1,10 @@
+config.toml
+__pycache__/
+*.pyc
+.venv/
+venv/
+.env
+.pytest_cache/
+.DS_Store
+bo_toolkit_data/
+*.wid

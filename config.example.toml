@@ -1,0 +1,47 @@
+# Copy this file to config.toml and fill in your own values.
+# config.toml is git-ignored, so nothing environment-specific ends up in the repository.
+
+[server]
+url = "https://bo.example.com:6405/biprws"
+
+[team]
+# People who run conversions; recorded in the activity log.
+operators = ["Alice", "Bob", "Carol"]
+
+[backup]
+# Top-level folders under "Public Folders" whose name starts with this are offered as backup targets.
+folder_prefix = "Backup"
+# Used when no folder is picked in the UI.
+folder_name = "Backup Reports"
+
+[universes]
+# Target .unx universes: name = CMS id. Use the API explorer page to look up ids.
+# In "match by name" mode a query on "Sales.unv" is moved to "Sales" below.
+"Sales" = "100001"
+"Finance" = "100002"
+"Customers" = "100003"
+"Inventory" = "100004"
+
+[universes_preferred]
+# If two target universes share a name, the id listed here wins.
+# "Sales" = "100001"
+
+[conversion]
+# Date range used when prompts must be answered (row-count verification, RLS check).
+date_start = "2026-01-01T00:00:00"
+date_end = "2026-01-31T23:59:59"
+# A date prompt whose name contains one of these gets date_end, any other gets date_start.
+date_end_keywords = ["end", "until", "finish"]
+
+[inventory]
+exclude_folders = "archive, backup"
+
+[rls.columns]
+# Row-level security check: possible column names for each dimension.
+# A report normally has only one of them; the first match is used.
+brand = ["Brand", "Brand Name", "Make"]
+region = ["Region", "Sales Region", "Territory"]
+
+[storage]
+# Where logs, rollback records and caches are written.
+data_dir = "~/Documents/BO_Toolkit_Data"
